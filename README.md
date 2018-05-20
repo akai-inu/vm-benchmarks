@@ -44,7 +44,6 @@
 - VirtualBox(win10-virtualbox.bash)
 - Native(win10-native.bash)
 - WSL Ubuntu 18.04(win10-wsl.bash)
-- WSL Ubuntu 18.04 with No Defender(win10-wsl-no-defender.bash)
 
 ### 計測マシンB(macOS High Sierra)
 

@@ -1,0 +1,49 @@
+PHP 7.2.5-0ubuntu0.18.04.1 (cli) (built: May  9 2018 17:21:02) ( NTS )
+Copyright (c) 1997-2018 The PHP Group
+Zend Engine v3.2.0, Copyright (c) 1998-2018 Zend Technologies
+    with Zend OPcache v7.2.5-0ubuntu0.18.04.1, Copyright (c) 1999-2018, by Zend Technologies
+Composer version 1.6.5 2018-05-04 11:44:59
+git version 2.17.0
++ composer install --optimize-autoloader --no-suggest --no-ansi --no-progress --profile
+[6.5MB/0.01s] Loading composer repositories with package information
+[6.8MB/1.93s] Updating dependencies (including require-dev)
+[292.3MB/263.24s] Package operations: 79 installs, 0 updates, 0 removals
+[241.3MB/495.56s] Writing lock file
+[241.3MB/495.56s] Generating optimized autoload files
+[244.1MB/498.58s] Memory usage: 244.08MB (peak: 295.48MB), time: 498.58s
+
+real    8m18.891s
+user    0m9.203s
+sys     0m16.969s
++ ./vendor/bin/phpunit
+PHPUnit 7.1.5 by Sebastian Bergmann and contributors.
+
+Runtime:       PHP 7.2.5-0ubuntu0.18.04.1
+Configuration: /home/akai_inu/framework/phpunit.xml.dist
+
+Time: 41.74 seconds, Memory: 118.25MB
+
+There was 1 error:
+
+1) Illuminate\Tests\Integration\Cache\CacheLockTest::test_memcached_locks_can_block_for_seconds
+Illuminate\Contracts\Cache\LockTimeoutException: 
+
+/home/akai_inu/framework/src/Illuminate/Cache/Lock.php:81
+/home/akai_inu/framework/tests/Integration/Cache/CacheLockTest.php:58
+
+--
+
+There were 2 failures:
+
+1) Illuminate\Tests\Integration\Cache\CacheLockTest::test_memcached_locks_can_be_acquired_and_released
+Failed asserting that false is true.
+
+/home/akai_inu/framework/tests/Integration/Cache/CacheLockTest.php:30
+
+2) Illuminate\Tests\Integration\Cache\CacheLockTest::test_locks_can_run_callbacks
+Failed asserting that false matches expected 'taylor'.
+
+/home/akai_inu/framework/tests/Integration/Cache/CacheLockTest.php:84
+
+ERRORS!
+Tests: 3394, Assertions: 8272, Errors: 1, Failures: 2.

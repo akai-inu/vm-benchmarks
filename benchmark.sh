@@ -7,7 +7,12 @@ set -exu
 # homestead の場合に PHP のバージョンを変更
 sudo update-alternatives --set php /usr/bin/php7.2 || true
 
+sudo apt install php-redis -y
+
+rm -rf framework
+
 php -v
+php -m
 composer -V
 git --version
 
